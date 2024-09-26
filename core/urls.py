@@ -1,14 +1,11 @@
 from django.urls import path
-from . import views as core_views
-from services import views as services_views
+from . import views
 
 
 urlpatterns = [
-    path('', core_views.home, name="home"),
-    path('about/', core_views.about, name="about"),
-    path('services/', services_views.services, name="services"),
-    path('store/', core_views.store, name="store"),
-    path('contact/', core_views.contact, name="contact"),
-    path('blog/', core_views.blog, name="blog"),
-    path('sample/', core_views.sample, name="sample"),    
+    path('', views.home, name="home"),
+    path('about/', views.about, name="about"),
+    path('store/', views.store, name="store"),
+    path('contact/', views.contact, name="contact"),
+    path('sample/', views.sample, name="sample"),    
 ]
